@@ -1,20 +1,22 @@
 package br.com.senai.model;
 
 public class CarrinhoModel {
-	private int quantidadeDeItensNoCarrinho;
-	private ProdutoModel produtoModel;
-	private double valorTotalDoItem;
-	private int idDoProduto;
 
-	public CarrinhoModel(int quantidadeDeItensNoCarrinho, ProdutoModel produtoModel, double valorTotalNoCarrinho,
-			int idDoProduto) {
-		this.quantidadeDeItensNoCarrinho = quantidadeDeItensNoCarrinho;
-		this.produtoModel = produtoModel;
-		this.valorTotalDoItem = valorTotalNoCarrinho;
-		this.idDoProduto = idDoProduto;
-	}
+	private int quantidadeDeItensNoCarrinho;
+	private int idDoProduto;
+	private ProdutoModel produtoModel;
+	private double valorTotalPorItem;
 
 	public CarrinhoModel() {
+	}
+
+	public CarrinhoModel(int quantidadeDeItensNoCarrinho, int idDoProduto, ProdutoModel produtoModel,
+			double valorTotalPorItem) {
+		super();
+		this.quantidadeDeItensNoCarrinho = quantidadeDeItensNoCarrinho;
+		this.idDoProduto = idDoProduto;
+		this.produtoModel = produtoModel;
+		this.valorTotalPorItem = valorTotalPorItem;
 	}
 
 	public int getQuantidadeDeItensNoCarrinho() {
@@ -25,6 +27,14 @@ public class CarrinhoModel {
 		this.quantidadeDeItensNoCarrinho = quantidadeDeItensNoCarrinho;
 	}
 
+	public int getIdDoProduto() {
+		return idDoProduto;
+	}
+
+	public void setIdDoProduto(int idDoProduto) {
+		this.idDoProduto = idDoProduto;
+	}
+
 	public ProdutoModel getProdutoModel() {
 		return produtoModel;
 	}
@@ -33,20 +43,12 @@ public class CarrinhoModel {
 		this.produtoModel = produtoModel;
 	}
 
-	public double getValorTotalDoItem() {
-		return valorTotalDoItem;
+	public double getValorTotalPorItem() {
+		return valorTotalPorItem;
 	}
 
-	public void setValorTotalDoItem(double valorTotalDoItem) {
-		this.valorTotalDoItem = valorTotalDoItem;
-	}
-
-	public int getIdDoProduto() {
-		return idDoProduto;
-	}
-
-	public void setIdDoProduto(int idDoProduto) {
-		this.idDoProduto = idDoProduto;
+	public void setValorTotalPorItem(double valorTotalPorItem) {
+		this.valorTotalPorItem = valorTotalPorItem;
 	}
 
 }

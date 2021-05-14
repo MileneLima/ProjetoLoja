@@ -7,9 +7,8 @@ public class AdicionaCliente {
 	Scanner entrada = new Scanner(System.in);
 	
 	public String definirCliente() {
-		System.out.println("Informe o nome do cliente: ");
+		System.out.print("Informe o nome do cliente: ");
 		String nome = entrada.next();
 		return nome;
 	}
-	
 }
