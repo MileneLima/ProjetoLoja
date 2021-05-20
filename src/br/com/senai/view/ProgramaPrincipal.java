@@ -31,8 +31,6 @@ public class ProgramaPrincipal {
 
 		boolean sair = false;
 		
-		String cliente = adicionaCliente.definirCliente();
-
 		do {
 			produtoController.menu();
 			int opc = produtoController.opcao();
@@ -45,24 +43,26 @@ public class ProgramaPrincipal {
 				listaProduto.listarProdutos();
 				break;
 			case 3:
-				editaProduto.editarProduto(produtos);
+				editaProduto.editarProduto();
 				break;
 			case 4:
-				deletaProduto.removerProduto(produtos);
+				deletaProduto.removerProduto();
 				break;
 			case 5:
-				itensNoCarrinho.add(adicionaItemNoCarrinho.cadastrarItemNoCarrinho(produtos));
+				adicionaItemNoCarrinho.cadastrarItemNoCarrinho();
 				break;
-			case 6:
-				listaCarrinho.listarItensNoCarrinho(itensNoCarrinho);
-				break;
-			case 7:
-				listaCarrinho.gerarCupom(itensNoCarrinho, cliente);
-				break;
+			//case 6:
+			//	listaCarrinho.listarItensNoCarrinho(itensNoCarrinho);
+			//	break;
+			//case 7:
+			//	listaCarrinho.gerarCupom(itensNoCarrinho, cliente);
+			//	break;
 			case 9:
+				adicionaCliente.definirCliente();
+				break;
+			case 10:
 				sair = true;
 				break;
-
 			default:
 				System.out.println("Opção inválida!!!");
 				break;
